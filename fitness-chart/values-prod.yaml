@@ -22,7 +22,7 @@ secret:
   APP_SECRET: prod-secret
 
 gateway:
-  enabled: true
+  enabled: push
   gatewayClassName: fitness-gateway-class
   gatewayName: fitness-gateway
   routeName: fitness-route

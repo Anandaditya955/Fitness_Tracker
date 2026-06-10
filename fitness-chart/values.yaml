@@ -22,7 +22,7 @@ secret:
   APP_SECRET: wipro123
 
 gateway:
-  enabled: true
+  enabled: false
   gatewayClassName: fitness-gateway-class
   gatewayName: fitness-gateway
   routeName: fitness-route
