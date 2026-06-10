@@ -1,0 +1,28 @@
+namespace: fitness
+
+app:
+  name: fitness-tracker
+  replicas: 2
+  image:
+    repository: anandaditya955/fitness-tracker
+    tag: v1
+  containerPort: 5000
+
+service:
+  name: fitness-service
+  type: LoadBalancer
+  port: 80
+  targetPort: 5000
+
+config:
+  NODE_ENV: production
+  PORT: "5000"
+
+secret:
+  APP_SECRET: wipro123
+
+gateway:
+  enabled: false
+  gatewayClassName: fitness-gateway-class
+  gatewayName: fitness-gateway
+  routeName: fitness-route
